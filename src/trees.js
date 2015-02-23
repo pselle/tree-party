@@ -38,24 +38,22 @@ treeParty.getAllWords = function(root) {
 }
 
 treeParty.findWord = function(root, word) {
-  var exists
   function iterator(node, remainingWord) {
-//    console.log('remaining word is', remainingWord)
     var existsArr = node.children.filter(function(n) { return n.value == remainingWord[0] } )
-//    console.log(existsArr)
     if(existsArr.length > 0) {
       var nextRemainingWord = remainingWord.slice(1)
       if(nextRemainingWord.length > 0) {
-        node.children.forEach(function(n) { iterator(n, nextRemainingWord) })
+        for(var i=0; i < node.children.length; i++) {
+          return iterator(node.children[i], nextRemainingWord)
+        }
       } else {
-        exists = true
+        return true
       }
     } else {
-      exists = false
+      return false
     }
   }
-  iterator(root, word)
-  return exists
+  return iterator(root, word)
 }
 
 module.exports = treeParty
