@@ -19,7 +19,9 @@ var foundWords = t.getAllWords(root)
 console.log(foundWords)
 assert(foundWords.length == 2) // with 2 words
 
-var foundCats = t.findWord(root, 'cats')
+//var foundCats = t.findWord(root, 'cats')
+//console.log('foundCats is', foundCats)
 var foundHi = t.findWord(root, 'hi')
+console.log('foundHi is', foundHi)
 assert(foundCats == false) // no cats, nothing to see here
 assert(foundHi == true)
