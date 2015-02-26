@@ -1,7 +1,7 @@
 # Tree Party!
 
 I'm exploring data structures, so I built
-some trees in JavaScript to understand making and 
+some trees in JavaScript to understand making and
 traversing a tree.
 
 In this example, this is a trie. Words are added to the
